@@ -1,12 +1,4 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Page not found</title>
-<script>
-(function () {
-  var p = location.pathname;
-  if (/^\/precon(?:\/|$)/i.test(p) && !/^\/PreCon\//.test(p)) {
-    var destination = p.replace(/^\/precon(?=\/|$)/i, '/PreCon');
-    if (destination === '/PreCon') destination += '/';
-    location.replace(destination + location.search + location.hash);
-  }
-})();
-</script></head><body><h1>Page not found</h1><p>Looking for the Board Bard league? <a href="/PreCon/">Open the PreCon League Tracker</a>.</p></body></html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Board Bard League</title><script>
+if (/^\/precon\/?$/i.test(location.pathname) && location.pathname !== '/PreCon/') location.replace('/PreCon/'+location.search+location.hash);
+</script></head><body><p><a href="/PreCon/">Open the PreCon League Tracker</a></p></body></html>
